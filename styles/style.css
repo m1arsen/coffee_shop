@@ -56,6 +56,14 @@ html {
   color: #fff;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #14110E;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1170px;
@@ -74,6 +82,11 @@ a {
 .footer {
   padding: 32px;
   background: #1C1814;
+
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .footer p {
@@ -85,10 +98,7 @@ a {
   line-height: 180%;
 }
 
-.testimonials,
-.location {
-  height: 80vh;
-}
+
 
 /* Home Page */
 
@@ -115,12 +125,9 @@ main.section {
 .menuBtn {
   position: fixed;
 
-
   right: 55px;
   top: 55px;
-
-  border-radius: 4px;
-  z-index: 10;
+  z-index: 7;
 }
 
 .navBtn {
@@ -186,7 +193,7 @@ main.section {
   width: 30%;
   height: 100vh;
   background-color: #14110E;
-  z-index: 9;
+  z-index: 6;
 
   transform: translateX(100%);
   transition: transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -217,7 +224,7 @@ main.section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
   height:100%;
   background-color: #584836;
@@ -283,6 +290,8 @@ main.section {
 
 .about {
   background-color: #14110E;
+  padding-bottom: 90px;
+  position: relative;
 }
 
 .sectionTitle {
@@ -370,8 +379,9 @@ main.section {
 /* Products Page */
 
 .products {
-  padding-bottom: 80px;
+  padding-bottom: 180px;
   background-color: #14110E;
+  position: relative;
 }
 
 .productCard {
@@ -505,8 +515,9 @@ main.section {
 /* testimonials page */
 
 .testimonials {
-  padding-bottom: 80px;
-  background-color: #14110E;
+  padding-bottom: 180px;
+  min-height: 100%;
+  position: relative;
 }
 
 .testimonialsContainer {
@@ -563,6 +574,9 @@ main.section {
 
 .location {
   background-color: #14110E;
+  min-height: 100%;
+  padding-bottom: 90px;
+  position: relative;
 }
 
 .locationContainer {
