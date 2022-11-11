@@ -87,7 +87,7 @@ a {
 
 .testimonials,
 .location {
-  min-height: 100vh;
+  height: 80vh;
 }
 
 /* Home Page */
@@ -104,6 +104,12 @@ main.section {
   display: flex;
 
   position: relative;
+}
+
+.topMenu.homePage {
+  position: fixed;
+  width: 100%;
+  opacity: 0.9;
 }
 
 .menuBtn {
@@ -311,7 +317,7 @@ main.section {
 }
 
 .storySection {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 
   display: flex;
   column-gap: 32px;
@@ -364,7 +370,7 @@ main.section {
 /* Products Page */
 
 .products {
-  padding-bottom: 90px;
+  padding-bottom: 80px;
   background-color: #14110E;
 }
 
@@ -499,6 +505,7 @@ main.section {
 /* testimonials page */
 
 .testimonials {
+  padding-bottom: 80px;
   background-color: #14110E;
 }
 
@@ -559,6 +566,7 @@ main.section {
 }
 
 .locationContainer {
+  padding-bottom: 80px;
   display: flex;
   justify-content: space-between;
 }
