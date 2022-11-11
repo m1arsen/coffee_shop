@@ -106,10 +106,6 @@ main.section {
   position: relative;
 }
 
-.topMenu.homePage {
-  background: #1c1814d3;
-}
-
 .menuBtn {
   position: fixed;
 
@@ -234,7 +230,7 @@ main.section {
 }
 
 .mainRow {
-  margin-top: 260px;
+  padding-top: 260px;
   text-align: center;
 }
 
