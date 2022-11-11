@@ -1,0 +1,594 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/urbanist-v10-latin-500.woff2') format('woff2'),
+       url('../fonts/urbanist-v10-latin-500.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/urbanist-v10-latin-regular.woff2') format('woff2'),
+       url('../fonts/urbanist-v10-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/urbanist-v10-latin-600.woff2') format('woff2'),
+       url('../fonts/urbanist-v10-latin-600.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/righteous-v13-latin-regular.woff2') format('woff2'),
+       url('../fonts/righteous-v13-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/inter-v12-latin-regular.woff2') format('woff2'),
+       url('../fonts/inter-v12-latin-regular.woff') format('woff');
+}
+
+/* Styles */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Urbanist;
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 32px;
+  background: #1C1814;
+}
+
+.footer p {
+  text-align: center;
+
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 180%;
+}
+
+.testimonials,
+.location {
+  min-height: 100vh;
+}
+
+/* Home Page */
+
+main.section {
+  height: 100vh;
+  background: url('../img/home/home_bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.topMenu {
+  padding: 20px 0;
+  background: #1c1814;
+  display: flex;
+
+  position: relative;
+}
+
+.topMenu.homePage {
+  background: #1c1814d3;
+}
+
+.menuBtn {
+  position: fixed;
+
+
+  right: 55px;
+  top: 55px;
+
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.navBtn {
+  width: 37px;
+  height: 18.5px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.navBtn span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .3s ease-in;
+}
+
+.navBtn span:nth-child(1) {
+  transform-origin: left center;
+  top: 0px;
+}
+
+.navBtn span:nth-child(2) {
+  transform-origin: left center;
+  top: 9px;
+}
+
+.navBtn span:nth-child(3) {
+  transform-origin: left center;
+  top: 18.5px;
+}
+
+.navBtn.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -5px;
+  left: 5px;
+}
+
+.navBtn.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.navBtn.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 20.5px;
+  left: 5px;
+}
+
+.navList {
+  padding: 130px 50px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  background-color: #14110E;
+  z-index: 9;
+
+  transform: translateX(100%);
+  transition: transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.navList.open {
+  transform: translateX(0);
+}
+
+.navList ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.navList a {
+  font-family: 'Righteous';
+  font-size: 40px;
+
+  transition: color .2s linear;
+}
+
+.navList a:hover {
+  color: #C99E71;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height:100%;
+  background-color: #584836;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay.show {
+  opacity: 0.6;
+  visibility: visible;
+}
+
+.logoLink {
+  margin: 0 auto;
+}
+
+.mainRow {
+  margin-top: 260px;
+  text-align: center;
+}
+
+.mainTitle {
+  margin-bottom: 32px;
+
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 130%;
+}
+
+.mainSubtitle {
+  margin-bottom: 64px;
+
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 180%;
+}
+
+.btn {
+  padding: 24px 40px;
+
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  background-color: #C99E71;
+  border: unset;
+
+  color: #fff;
+  text-transform: uppercase;
+
+  transition: .2s ease-in;
+}
+
+.btn:hover {
+  background-color: #dfaf7c;
+}
+
+/* About page */
+
+.about {
+  background-color: #14110E;
+}
+
+.sectionTitle {
+  padding: 30px 0;
+
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.benefitsSection {
+  padding: 30px 0 120px;
+
+  display: flex;
+  column-gap: 35px;
+}
+
+.benefitTitle {
+  margin-bottom: 24px;
+
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.benefitTitle span {
+  margin-right: 12px;
+  color: #C99E71;
+}
+
+.storySection {
+  padding-bottom: 120px;
+
+  display: flex;
+  column-gap: 32px;
+}
+
+.storySectionInfoContainer {
+  max-width: 510px;
+  padding: 120px 56px;
+  background: #1C1814;
+}
+
+.storySectionSubTitle {
+  margin-bottom: 12px;
+
+  font-family: 'Urbanist';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #C99E71;
+}
+
+.storySectionTitle {
+  margin-bottom: 36px;
+
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+}
+
+.storySectionText {
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+
+  text-transform: capitalize;
+}
+
+.storySectionImgContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.secondImg {
+  grid-row: span 2;
+}
+
+/* Products Page */
+
+.products {
+  padding-bottom: 90px;
+  background-color: #14110E;
+}
+
+.productCard {
+  padding: 48px;
+  max-width: 366px;
+
+  background-color: #121315;
+  text-align: center;
+
+  position: relative;
+}
+
+.productImg {
+  margin-bottom: 36px;
+}
+
+.productName {
+  margin-bottom: 20px;
+
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  transition: .2s linear;
+}
+
+.productPrice {
+  font-family: 'Urbanist';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  transition: .2s linear;
+}
+
+.productPrice span {
+  color: #C99E71;
+}
+
+.productCard:hover .productBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.productCard:hover .productPrice,
+.productCard:hover .productName {
+  opacity: 0;
+}
+
+.productsSection {
+  padding: 50px 0 140px;
+  display: flex;
+  column-gap: 36px;
+}
+
+.productBtn {
+  padding: 24px 40px;
+  width: 270px;
+
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 48px;
+
+  background-color: #C99E71;
+  border: unset;
+
+  color: #fff;
+
+  transition: .3s ease-in;
+  opacity: 0;
+  transform: translateY(10%) scale(0.7);
+
+}
+
+.productBtn:hover {
+  background-color: #dfaf7c;
+}
+
+.offerSection {
+  padding: 85px;
+  background: #1C1814;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.offerImgContainer {
+  width: 100%;
+}
+
+.offerImg {
+  display: block;
+  margin: 0 auto;
+}
+
+.offerInfo {
+  max-width: 535px;
+}
+
+.offerName {
+  margin-bottom: 36px;
+
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+}
+
+.offerText {
+  margin-bottom: 36px;
+
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  text-transform: capitalize;
+}
+
+/* testimonials page */
+
+.testimonials {
+  background-color: #14110E;
+}
+
+.testimonialsContainer {
+  display: flex;
+  column-gap: 40px;
+}
+
+.testimonial {
+  padding: 40px;
+  max-width: 565px;
+  background-color: #1C1814;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  column-gap: 24px;
+  row-gap: 10px;
+}
+
+.testimonialPhoto {
+  margin-bottom: 28px;
+}
+
+.testimonialName {
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.testimonialName span {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 180%;
+
+  opacity: .6;
+}
+
+
+.testimonialText {
+  max-width: 332px;
+
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  text-transform: capitalize;
+  opacity: .7;
+}
+
+/* location page */
+
+.location {
+  background-color: #14110E;
+}
+
+.locationContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.locationPlace {
+  background-color: #1C1814;
+  max-width: 360px;
+}
+
+.locationImg {
+  width: 100%;
+}
+
+.locationInfo {
+  padding: 20px 20px;
+}
+
+.locationPlaceName {
+  margin-bottom: 10px;
+
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.locationPlaceSchedule {
+  margin-bottom: 10px;
+}
