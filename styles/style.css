@@ -4,50 +4,47 @@
   font-family: 'Urbanist';
   font-style: normal;
   font-weight: 500;
-  src: local(''),
-       url('../fonts/urbanist-v10-latin-500.woff2') format('woff2'),
-       url('../fonts/urbanist-v10-latin-500.woff') format('woff');
+  src: local(''), url('../fonts/urbanist-v10-latin-500.woff2') format('woff2'),
+    url('../fonts/urbanist-v10-latin-500.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Urbanist';
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-       url('../fonts/urbanist-v10-latin-regular.woff2') format('woff2'),
-       url('../fonts/urbanist-v10-latin-regular.woff') format('woff');
+  src: local(''), url('../fonts/urbanist-v10-latin-regular.woff2') format('woff2'),
+    url('../fonts/urbanist-v10-latin-regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Urbanist';
   font-style: normal;
   font-weight: 600;
-  src: local(''),
-       url('../fonts/urbanist-v10-latin-600.woff2') format('woff2'),
-       url('../fonts/urbanist-v10-latin-600.woff') format('woff');
+  src: local(''), url('../fonts/urbanist-v10-latin-600.woff2') format('woff2'),
+    url('../fonts/urbanist-v10-latin-600.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Righteous';
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-       url('../fonts/righteous-v13-latin-regular.woff2') format('woff2'),
-       url('../fonts/righteous-v13-latin-regular.woff') format('woff');
+  src: local(''), url('../fonts/righteous-v13-latin-regular.woff2') format('woff2'),
+    url('../fonts/righteous-v13-latin-regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-       url('../fonts/inter-v12-latin-regular.woff2') format('woff2'),
-       url('../fonts/inter-v12-latin-regular.woff') format('woff');
+  src: local(''), url('../fonts/inter-v12-latin-regular.woff2') format('woff2'),
+    url('../fonts/inter-v12-latin-regular.woff') format('woff');
 }
 
 /* Styles */
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -56,12 +53,13 @@ html {
   color: #fff;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  background-color: #14110E;
+  background-color: #14110e;
 }
 
 .container {
@@ -81,7 +79,7 @@ a {
 
 .footer {
   padding: 32px;
-  background: #1C1814;
+  background: #1c1814;
 
   position: absolute;
   width: 100%;
@@ -97,8 +95,6 @@ a {
   font-size: 14px;
   line-height: 180%;
 }
-
-
 
 /* Home Page */
 
@@ -135,7 +131,7 @@ main.section {
   height: 18.5px;
   position: relative;
   transform: rotate(0deg);
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -149,7 +145,7 @@ main.section {
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .navBtn span:nth-child(1) {
@@ -192,11 +188,11 @@ main.section {
   right: 0;
   width: 30%;
   height: 100vh;
-  background-color: #14110E;
+  background-color: #14110e;
   z-index: 6;
 
   transform: translateX(100%);
-  transition: transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .navList.open {
@@ -213,11 +209,11 @@ main.section {
   font-family: 'Righteous';
   font-size: 40px;
 
-  transition: color .2s linear;
+  transition: color 0.2s linear;
 }
 
 .navList a:hover {
-  color: #C99E71;
+  color: #c99e71;
 }
 
 .overlay {
@@ -226,7 +222,7 @@ main.section {
   left: 0;
   z-index: 5;
   width: 100%;
-  height:100%;
+  height: 100%;
   background-color: #584836;
   opacity: 0;
   visibility: hidden;
@@ -273,13 +269,13 @@ main.section {
   font-size: 18px;
   line-height: 22px;
 
-  background-color: #C99E71;
+  background-color: #c99e71;
   border: unset;
 
   color: #fff;
   text-transform: uppercase;
 
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .btn:hover {
@@ -289,7 +285,7 @@ main.section {
 /* About page */
 
 .about {
-  background-color: #14110E;
+  background-color: #14110e;
   padding-bottom: 90px;
   position: relative;
 }
@@ -322,7 +318,7 @@ main.section {
 
 .benefitTitle span {
   margin-right: 12px;
-  color: #C99E71;
+  color: #c99e71;
 }
 
 .storySection {
@@ -335,7 +331,7 @@ main.section {
 .storySectionInfoContainer {
   max-width: 510px;
   padding: 120px 56px;
-  background: #1C1814;
+  background: #1c1814;
 }
 
 .storySectionSubTitle {
@@ -345,7 +341,7 @@ main.section {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  color: #C99E71;
+  color: #c99e71;
 }
 
 .storySectionTitle {
@@ -380,7 +376,7 @@ main.section {
 
 .products {
   padding-bottom: 180px;
-  background-color: #14110E;
+  background-color: #14110e;
   position: relative;
 }
 
@@ -407,7 +403,7 @@ main.section {
   line-height: 30px;
   text-transform: uppercase;
 
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 
 .productPrice {
@@ -417,11 +413,11 @@ main.section {
   line-height: 22px;
   text-transform: uppercase;
 
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 
 .productPrice span {
-  color: #C99E71;
+  color: #c99e71;
 }
 
 .productCard:hover .productBtn {
@@ -457,15 +453,14 @@ main.section {
   position: absolute;
   bottom: 48px;
 
-  background-color: #C99E71;
+  background-color: #c99e71;
   border: unset;
 
   color: #fff;
 
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   opacity: 0;
   transform: translateY(10%) scale(0.7);
-
 }
 
 .productBtn:hover {
@@ -474,7 +469,7 @@ main.section {
 
 .offerSection {
   padding: 85px;
-  background: #1C1814;
+  background: #1c1814;
 
   display: flex;
   justify-content: space-between;
@@ -528,7 +523,7 @@ main.section {
 .testimonial {
   padding: 40px;
   max-width: 565px;
-  background-color: #1C1814;
+  background-color: #1c1814;
 
   display: flex;
   flex-wrap: wrap;
@@ -555,9 +550,8 @@ main.section {
   font-size: 14px;
   line-height: 180%;
 
-  opacity: .6;
+  opacity: 0.6;
 }
-
 
 .testimonialText {
   max-width: 332px;
@@ -567,13 +561,13 @@ main.section {
   font-size: 16px;
   line-height: 180%;
   text-transform: capitalize;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 /* location page */
 
 .location {
-  background-color: #14110E;
+  background-color: #14110e;
   min-height: 100%;
   padding-bottom: 90px;
   position: relative;
@@ -586,7 +580,7 @@ main.section {
 }
 
 .locationPlace {
-  background-color: #1C1814;
+  background-color: #1c1814;
   max-width: 360px;
 }
 
